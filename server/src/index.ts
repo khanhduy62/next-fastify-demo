@@ -61,7 +61,7 @@ const start = async () => {
     })
     await fastify.listen({
       port: envConfig.PORT,
-      host: '0.0.0.0'
+      host: envConfig.IS_PRODUCTION ? '0.0.0.0' : 'localhost'
     })
     console.log(`Server đang chạy dưới local tại: ${API_URL}`)
     if (envConfig.IS_PRODUCTION) {
