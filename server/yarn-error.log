@@ -1,0 +1,89 @@
+Arguments: 
+  /Users/apple/.nvm/versions/node/v20.13.1/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js
+
+PATH: 
+  /Library/PostgreSQL/16/bin:/Users/apple/opt/anaconda3/bin:/Users/apple/.rbenv/shims:/Users/apple/.nvm/versions/node/v20.13.1/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Users/apple/Library/Android/sdk/emulator:/Users/apple/Library/Android/sdk/tools:/Users/apple/Library/Android/sdk/tools/bin:/Users/apple/Library/Android/sdk/platform-tools:/Users/apple/.composer/vendor/bin:/Library/PostgreSQL/16/bin:/usr/local/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.13.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: /Users/apple/Documents/NodeJS/nextjs-free/server/node_modules/esbuild: spawn /bin/sh EAGAIN
+      at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+      at onErrorNT (node:internal/child_process:484:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "npx nodemon",
+      "build": "rimraf ./dist && tsc && tsc-alias",
+      "start": "node dist/index.js",
+      "lint": "eslint .",
+      "lint:fix": "eslint . --fix",
+      "prettier": "prettier --check .",
+      "prettier:fix": "prettier --write ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@fastify/auth": "^4.6.0",
+      "@fastify/cookie": "^9.3.1",
+      "@fastify/cors": "^9.0.1",
+      "@fastify/helmet": "^11.1.1",
+      "@fastify/multipart": "^8.1.0",
+      "@fastify/static": "^7.0.1",
+      "@prisma/client": "^5.10.2",
+      "bcrypt": "^5.1.1",
+      "chalk": "^5.3.0",
+      "date-fns": "^3.3.1",
+      "dotenv": "^16.4.5",
+      "fast-jwt": "^4.0.0",
+      "fastify": "^4.26.0",
+      "fastify-plugin": "^4.5.1",
+      "fastify-type-provider-zod": "^1.1.9",
+      "ms": "^2.1.3",
+      "zod": "^3.22.4"
+    },
+    "devDependencies": {
+      "@types/bcrypt": "^5.0.2",
+      "@types/ms": "^0.7.34",
+      "@types/node": "^20.11.16",
+      "@typescript-eslint/eslint-plugin": "^6.20.0",
+      "@typescript-eslint/parser": "^6.20.0",
+      "eslint": "^8.56.0",
+      "eslint-config-prettier": "^9.1.0",
+      "eslint-plugin-prettier": "^5.1.3",
+      "nodemon": "^3.0.3",
+      "prettier": "^3.2.5",
+      "prisma": "^5.10.2",
+      "rimraf": "^5.0.5",
+      "ts-node": "^10.9.2",
+      "tsc-alias": "^1.8.8",
+      "tsconfig-paths": "^4.2.0",
+      "tsx": "^4.7.1",
+      "typescript": "^5.3.3"
+    },
+    "overrides": {
+      "string-width": "^4.2.3",
+      "strip-ansi": "^6.0.1",
+      "wrap-ansi": "^7.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
