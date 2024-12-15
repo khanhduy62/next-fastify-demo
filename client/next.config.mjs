@@ -7,6 +7,10 @@ const nextConfig = {
         hostname: 'localhost',
         port: '4000'
         // pathname: '/photos/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.duylk.id.vn'
       }
     ]
   },
