@@ -24,5 +24,6 @@ jobs:
       with:
         node-version: 18.18.0
         cache: 'yarn'
+        cache-dependency-path: './client/yarn.lock'
     - run: yarn add
     - run: yarn build
