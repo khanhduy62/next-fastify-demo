@@ -15,8 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Move to client folder
-      run: cd ../../client/
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
@@ -24,5 +22,6 @@ jobs:
       with:
         node-version: 20.18.0
         cache: 'npm'
+    - run: cd ../../client/
     - run: npm ci --force
     - run: npm run build --if-present
