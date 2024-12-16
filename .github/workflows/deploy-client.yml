@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: Move to client folder
-      run: cd client/
+      run: cd ../../client/
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
