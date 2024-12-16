@@ -45,7 +45,12 @@ jobs:
             source ~/.nvm/nvm.sh
             cd ~/next-fastify-demo
             cd client
-            git fetch --all
+            expect << 'END'
+              spawn git fetch --all
+              expect "Password:"
+              send "${{ secrets.PASS_GIT_TOKEN }}\r"
+              expect eof
+            END
             git reset --hard origin/main
             echo "${{secrets.ENV_PRODUCTION}}" > .env
             yarn install
