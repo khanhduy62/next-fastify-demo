@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Trang chủ",
-  description: "Trang chủ của Productic, được tạo bởi Duy Le",
+  description: "Trang chủ của Product",
 };
 
 export default function Home() {
