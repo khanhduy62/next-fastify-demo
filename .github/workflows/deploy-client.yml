@@ -17,12 +17,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    # - name: Use Node.js ${{ matrix.node-version }}
-    #   uses: actions/setup-node@v4
-    #   with:
-    #     node-version: 18.18.0
-    #     cache: 'npm'
     - name: Change to client directory
       run: cd client
-    - run: npm ci --force
-    - run: npm run build --if-present
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18.18.0
+        cache: 'yarn'
+    - run: yarn add
+    - run: yarn build
